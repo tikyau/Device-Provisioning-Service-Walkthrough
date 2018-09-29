@@ -1,12 +1,3 @@
----
-title: Provision a device using Azure IoT Hub Device Provisioning Service | Microsoft Docs
-description: Provision your device to a single IoT hub using the Azure IoT Hub Device Provisioning Service
-author: wesmc7777
-ms.service: iot-dps
-services: iot-dps
-manager: timlt
-ms.custom: mvc
----
 
 # Provision the device to an IoT hub using the Azure IoT Hub Device Provisioning Service
 
@@ -18,7 +9,7 @@ ms.custom: mvc
 
 ## Prerequisites
 
-Before you proceed, make sure to configure your device as discussed in the tutorial [Setup a device to provision using Azure IoT Hub Device Provisioning Service](./tutorial-set-up-device.md).
+Before you proceed, make sure to configure your device in the tutorial [Setup a device to provision using Azure IoT Hub Device Provisioning Service](./tutorial-set-up-device.md).
 
 If you're unfamiliar with the process of auto-provisioning, be sure to review [Auto-provisioning concepts](concepts-auto-provisioning.md) before continuing.
 
@@ -31,7 +22,7 @@ This step involves adding the device's unique security artifacts to the Device P
     - The *Endorsement Key* that is unique to each TPM chip or simulation, which is obtained from the TPM chip manufacturer.  Read the [Understand TPM Endorsement Key](https://technet.microsoft.com/library/cc770443.aspx) for more information.
     - The *Registration ID* that is used to uniquely identify a device in the namespace/scope. This ID may or may not be the same as the device ID. The ID is mandatory for every device. For TPM-based devices, the registration ID may be derived from the TPM itself, for example, an SHA-256 hash of the TPM Endorsement Key.
 
-    [![Enrollment information for TPM in the portal](./media/tutorial-provision-device-to-hub/tpm-device-enrollment.png)](./media/tutorial-provision-device-to-hub/tpm-device-enrollment.png#lightbox)  
+    [![Enrollment information for TPM in the portal](https://picr.me/image/QzNMU)](./media/tutorial-provision-device-to-hub/tpm-device-enrollment.png#lightbox)  
 
 - For X.509 based devices you need:
     - The [certificate issued to the X.509](https://msdn.microsoft.com/library/windows/desktop/bb540819.aspx) chip or simulation, in the form of either a *.pem* or a *.cer* file. For individual enrollment, you need to use the per-device  *signer certificate* for your X.509 system, while for enrollment groups, you need to use the *root certificate*. 
@@ -84,15 +75,4 @@ Once your device boots, the following actions should take place:
 
 For more information, see the TPM simulator sample application, [dps_client_sample](https://github.com/Azure/azure-iot-device-auth/blob/master/dps_client/samples/dps_client_sample/dps_client_sample.c). 
 
-## Next steps
-In this tutorial, you learned how to:
 
-> [!div class="checklist"]
-> * Enroll the device
-> * Start the device
-> * Verify the device is registered
-
-Advance to the next tutorial to learn how to provision multiple devices across load-balanced hubs. 
-
-> [!div class="nextstepaction"]
-> [Provision devices across load-balanced IoT hubs](./tutorial-provision-multiple-hubs.md)
