@@ -47,7 +47,7 @@ Now you enroll the device with your Device Provisioning Service instance, using 
 
 3. When the device is successfully enrolled, you should see it displayed in the portal as follows:
 
-    ![Successful TPM enrollment in the portal](./media/tutorial-provision-device-to-hub/tpm-enrollment-success.png)
+    ![Successful TPM enrollment in the portal](./media/tpm-enrollment-success.png)
 
 After enrollment, the provisioning service then waits for the device to boot and connect with it at any later point in time. When your device boots for the first time, the client SDK library interacts with your chip to extract the security artifacts from the device, and verifies registration with your Device Provisioning service. 
 
@@ -71,7 +71,7 @@ Once your device boots, the following actions should take place:
 4. The IoT Hub client application on the device then connects to your hub. 
 5. On successful connection to the hub, you should see the device appear in the IoT hub's **IoT Devices** explorer. 
 
-    ![Successful connection to hub in the portal](./media/tutorial-provision-device-to-hub/hub-connect-success.png)
+    ![Successful connection to hub in the portal](./media/hub-connect-success.png)
 
 For more information, see the TPM simulator sample application, [dps_client_sample](https://github.com/Azure/azure-iot-device-auth/blob/master/dps_client/samples/dps_client_sample/dps_client_sample.c). 
 
