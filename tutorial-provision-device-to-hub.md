@@ -1,7 +1,7 @@
 
 # Provision the device to an IoT hub using the Azure IoT Hub Device Provisioning Service
 
- In this tutorial, you learn how to use this service to provision your device to a single IoT hub, using auto-provisioning and **_enrollment lists_**. This tutorial shows you how to:
+ Below is a step-by-step walkthough on how you can use this service to provision your device to a single IoT hub, using auto-provisioning and **_enrollment lists_**. This tutorial shows you how to:
 
 * Enroll the device
 * Start the device
